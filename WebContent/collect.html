@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁置物-我的购物车</title>
+    <link href="css/whole.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/head.css" type="text/css" rel="stylesheet">
+    <link href="css/loginRegister.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slider.css" rel="stylesheet">
+    <link href="css/collect.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 顶部搜索框 -->
+    <div class="topBg"></div>
+    <div class="alignCenter head">
+        <div class="headLeft">
+            <div class="logoImg">
+                <span></span>
+                <img src="img/logoFont.png">
+                <img src="img/logoBg.jpg" class="hideImg">
+                <span></span>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="goods.html?page=0&ways=0&classify=全部">出售</a>
+                </li>
+                <li>
+                    <a href="goods.html?page=0&ways=1&classify=全部">求售</a>
+                </li>
+                <li>
+                    <a href="goods.html?page=0&ways=2&classify=全部">赠送</a>
+                </li>
+                <li>
+                    <a href="goods.html?page=0&ways=3&classify=全部">租赁</a>
+                </li>
+            </ul>
+            <div class="search">
+                <div class="claChoose">
+                    <span>分类</span>
+                    <ul>
+                        <li>待售</li>
+                        <li>求卖</li>
+                        <li>赠送</li>
+                        <li>租赁</li>
+                        <li>代购</li>
+                    </ul>
+                </div>
+                <div class="searchFor">
+                    <input type="text">
+                    <span class="icon-search"></span>
+                </div>
+                <ul>
+                    <li>12</li>
+                    <li>2</li>
+                    <li>4</li>
+                </ul>
+                <span class="error">请先选择分类</span>
+            </div>
+        </div>
+        <div class="showContaniner">
+            <span>登录</span>
+            <span>注册</span>
+            <div class="showInformation">
+                <div>
+                    <img src="">
+                    <span class="userName">name</span>
+                </div>
+                <div class="function">
+                    <a href="myGoods.html?nav=1">发布闲置</a>
+                    <a href="myGoods.html?nav=2">发布寻求</a>
+                    <a href="myGoods.html?nav=3">我的闲置</a>
+                    <a href="myGoods.html?nav=4">我的寻求</a>
+                </div>
+                <p class='outLogon'>注销</p>
+            </div>
+        </div>
+    </div>
+    <div class="funFormation">
+        <div class="alignCenter">
+            <p class="wholeTitle">我的购物车</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="mainTitle">
+            <span>商品</span>
+            <span class="mainHandle">操作</span>
+            <span class="nameTitle">名字</span>
+            <span class="addressTitle">地址</span>
+            <span class="priceTitle">价格</span>
+        </div>
+        <hr>
+        <div class="mainContents">
+            <div class="mainContent">
+                <img src="img/14.jpg">
+                <div class="goodsInformation">
+                    <a class="goodsName">name</a>
+                    <p class="goodsIntroduce">introduce</p>
+                </div>
+                <p>
+                    <span class="address">address</span>
+                    <span class="goodsPrice">price</span>
+                </p>
+                <span class="icon-cancel"></span>
+                <hr>
+            </div>
+        </div>
+    </main>
+    <!-- 页脚 -->
+    <footer>
+        <p>
+            <span>蚂蚁置物，请放心我的服务</span>
+            <span class="icon-qq footIcon"></span>
+            <span class="icon-wechat footIcon"></span>
+            <span class="icon-sina-weibo footIcon"></span>
+            <span>欢迎拨打：130-6060-7112</span>
+        </p>
+        <p>
+            <span class="icon-copyright">广东金融学院java部落</span>
+            <span>你说的都队</span>
+            <span>版权所有</span>
+        </p>
+    </footer>
+    <!-- 随页面滚动滑块 -->
+    <div class="slider">
+        <a class="icon-user-circle slideIcon" href="myGoods.html?nav=0">
+            <span>用户资料</span>
+        </a>
+        <a href="chat.html" class="icon-chat-bubble-dots slideIcon">
+            <span>聊天空间</span>
+        </a>
+        <a href="collect.html" class="icon-shopping-cart slideIcon">
+            <span>已购闲置</span>
+        </a>
+        <a class="icon-edit-3 slideIcon" href="Feedback.html">
+            <span>反馈</span>
+        </a>
+    </div>
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="js/whole.js" type="text/javascript"></script>
+    <script src="js/loginRegister.js" type="text/javascript"></script>
+    <script src="js/collect.js" type="text/javascript"></script>
+</body>
+
+</html>

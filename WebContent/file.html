@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <form id="formId" action="" method="post" enctype="multipart/form-data" class="form-horizontal ">
+        <label class="col-md-3 control-label">视频上传</label>
+        <div class="col-md-5">
+            <span style='color:blue;'>(支持'3gp','rmvb','flv','wmv','avi','mkv','mp4','mp3','wav'格式)</span>
+            <input type="file" class="file" name="file">
+        </div>
+    </form> -->
+
+
+    <input type="file" accept="image/*" capture="camera">
+    <input type="file" accept="video/*" capture="camcorder" id="imgInp">
+    <input type="file" accept="audio/*" capture="microphone">
+    <video src="" controls="controls" id="1">
+            您的浏览器不支持 video 标签。
+            </video>
+            <video src="" controls="controls" id="2">
+            您的浏览器不支持 video 标签。
+            </video>
+
+    <button>提交</button>
+    <script src="jquery-3.3.1.js"></script>
+    <!-- <script>
+        $(".file").fileupload({
+            url: "${context}/admin/video/upload/save",
+            dataType: "json",
+            acceptFileTypes: /(\.|\/)(3gp|flv|rmvb|mp4|wmv|avi|mkv|mp3|wav)$/i,
+            maxFileSize: 500 * 1024 * 1024,
+            minFileSize: 5,
+            messages: {
+                maxFileSize: '文件上传的最大大小为 500MB',
+                acceptFileTypes: '此文件是不支持的视频格式'
+            },
+            formData: function(from) {   //当上传文件时需要传递其他参数时 可以通过以下方式进行赋值传递
+                return [{
+                    name: "deviceCode",
+                    value: $('input[name="deviceCode"]').val()
+                }, {
+                    name: "type",
+                    value: $("select").val()
+                }]
+            },
+            done: function(e, data) { //当文件上传成功后调用这个回调函数
+                console.log(data)
+            },
+
+            processfail: function(e, data) { //根据的定义的校验规则进行文件检验
+                var currentFile = data.files[data.index];
+                if (data.files.error && currentFile.error) {
+                    console.log(currentFile.error)
+                }
+            }
+        });
+    </script> -->
+
+
+    <script>
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+                var data = new FormData();
+                data.append("files", input.files[0]);
+                reader.onload = function(e) {
+
+                    $('#1').attr('src', e.target.result);
+
+                }
+
+                reader.readAsDataURL(input.files[0]);
+                $('button').unbind();
+                $('button').click(function() {
+                    $.ajax({
+                        type: "post",
+                        dataType: "json",
+                        url: "UpLoadServlet?method=video",
+                        data: data,
+                        cache: false,
+                        processData: false,
+                        contentType: false,
+                        success: function(msg) {
+                           // if (msg.judge == "success") {
+                           //     alert("上传成功");
+                                $('#2').attr('src',msg.judge);
+                            //}
+                        }
+                    })
+                    return false;
+                });
+            }
+
+        }
+
+        $("#imgInp").change(function() {
+            readURL(this);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/manager.css">
+    <title>后台管理</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="img/logoC.png" alt="">
+            <ul>
+                <li class="notSelected">首页</li>
+                <li class="haveSelected">用户</li>
+                <li class="notSelected">商品</li>
+                <li class="notSelected">公告</li>
+                <li class="notSelected">反馈</li>
+            </ul>
+        </div>
+        <p>
+            <span class="outOfLogin">注销</span>
+            <span>欢迎<i class="managerName"></i>回到后台管理</span>
+        </p>
+    </header>
+    <main>
+        <p>您现在的位置：<a>蚂蚁置物</a>><span>管理后台</span></p>
+        <div class="handleNav">
+            <p class="navTitle">用户管理</p>
+            <p class="concreteHandle">
+                <span class="managerType">用户管理</span>
+                <span class="newAdd">新增</span>
+            </p>
+            <p class="navTitle">商品信息</p>
+            <p class="concreteHandle">
+                <span class="managerType">商品管理</span>
+                <span class="newAdd">新增</span>
+            </p>
+            <p class="navTitle">公告管理</p>
+            <p class="concreteHandle">
+                <span class="managerType">公告管理</span>
+                <span class="newAdd">新增</span>
+            </p>
+            <p class="navTitle">反馈管理</p>
+            <p class="concreteHandle">
+                <span class="managerType">反馈管理</span>
+            </p>
+        </div>
+
+        <div class="tableContainer">
+            <p class="managerTitle">首页</p>
+            <hr>
+
+            <div class="tableBlock">
+                <button class="sector">扇形图</button>
+                <button class="strip">条形图</button>
+                <canvas></canvas>
+            </div>
+
+            <!-- -------------表格----------- -->
+
+
+            <!-- -------用户表格----------- -->
+            <div class="tableBlock">
+                <table class="userM">
+                    <thead>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>手机</th>
+                        <th>QQ</th>
+                        <th>微信</th>
+                        <th>地址</th>
+                        <th class="tableHandle">操作</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tableID"><input type="text" disabled="disabled"></td>
+                            <td class="tableName"><input type="text" disabled="disabled"></td>
+                            <td class="tableMobile"><input type="text" disabled="disabled"></td>
+                            <td class="tableQQ"><input type="text" disabled="disabled"></td>
+                            <td class="tableWechat"><input type="text" disabled="disabled"></td>
+                            <td class="tableLocation"><input type="text" disabled="disabled"></td>
+                            <td>
+                                <span class="dataChange">修改</span>
+                                <span class="dataDelete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ---------商品表格------------ -->
+            <div class="tableBlock">
+                <table class="goodsM">
+                    <thead>
+                        <th>ID</th>
+                        <th>商品名</th>
+                        <th>商品价格</th>
+                        <th>取货方式</th>
+                        <th class="tableHandle">操作</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tableID"><span></span></td>
+                            <td class="tableGoods"><span></span></td>
+                            <td class="tablePrice"><span></span></td>
+                            <td class="tableWays"><span></span></td>
+                            <td>
+                                <span class="dataLook">修改</span>
+                                <span class="dataDelete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <!-- -------公告表格----------- -->
+            <div class="tableBlock">
+                <table class="announcesM">
+                    <thead>
+                        <th>ID</th>
+                        <th>公告</th>
+                        <th class="tableHandle">操作</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tableID"><span></span></td>
+                            <td class="tableAnnounce"><span></span></td>
+                            <td>
+                                <span class="dataEdit">编辑</span>
+                                <span class="dataDelete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+            <!-- ---------反馈表格--------- -->
+            <div class="tableBlock">
+                <table class="feedBackM">
+                    <thead>
+                        <th>ID</th>
+                        <th>用户满意度</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tableID"><span></span></td>
+                            <td class="tableSatisfy"><span></span></td>
+                            <td class="tableHandle">
+                                <span class="dataLook">查看</span>
+                                <span class="dataDelete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <p class="pageTurn">
+                每页行数：
+                <select class="rowsSelect">
+                    <option value="">10</option>
+                    <option value="">20</option>
+                    <option value="">30</option>
+                    <option value="">50</option>
+                </select>
+                <span class="firstPage turnHover">首页</span>
+                <span class="prePage turnHover">上一页</span>
+                <span class="currentPage">1</span>/
+                <span class="wholePage">1</span>
+                <span class="nextPage turnHover">下一页</span>
+                <span class="lastPage turnHover">尾页</span>
+                <select class="pageSelect">
+                    <option value="1页">1页</option>
+                </select> &nbsp;总数据数：
+                <span class="totalData"></span>
+            </p>
+
+
+
+            <div class="userChange changeBlock">
+                <h2>用户资料修改</h2>
+                <hr>
+                <p>
+                    <span class="label">ID</span>
+                    <input type="text">
+                </p>
+                <p>
+                    <span class="label">用户名</span>
+                    <input type="text">
+                </p>
+                <p>
+                    <span class="label">手机号码</span>
+                    <input type="text">
+                </p>
+                <p>
+                    <span class="label">QQ</span>
+                    <input type="text">
+                    <span>是否隐藏
+                        <input type="checkbox">
+                    </span>
+                </p>
+                <p>
+                    <span class="label">微信</span>
+                    <input type="text">
+                    <span>是否隐藏
+                        <input type="checkbox">
+                    </span>
+                </p>
+                <p>
+                    <span class="label">地址</span>
+                    <input type="text">
+                </p>
+                <p>
+                    <button class="haveSelected">保存</button>
+                    <button class="haveSelected">取消</button>
+                </p>
+            </div>
+
+
+
+
+            <div class="userAdd changeBlock">
+                <h2>用户添加</h2>
+                <hr>
+                <p>
+                    <span class="label">手机号码</span>
+                    <input type="text">
+                </p>
+                <p class="mobileError">请输入正确的手机号码</p>
+                <p>
+                    <span class="label">密码</span>
+                    <input type="text">
+                </p>
+                <p>
+                    <button class="haveSelected">保存</button>
+                    <button class="haveSelected">取消</button>
+                </p>
+            </div>
+
+
+            <div class="goodsChange changeBlock">
+                <h2>商品修改</h2>
+                <hr>
+                <div class="goodsImg">
+                    <img src="img/logoC.png" alt="">
+                    <input type="file">
+                </div>
+                <div>
+                    <p class="gooodsName">
+                        <span class="label">商品名字</span>
+                        <input type="text">
+                    </p>
+                    <p class="goodsIntroduce">
+                        <span class="label">商品简介</span>
+                        <input type="text">
+                    </p>
+                    <p class="goodsPrice">
+                        <span class="label">商品价格</span>
+                        <input type="text">
+                    </p>
+                    <p class="goodsWays">
+                        <span class="label">取货方式</span>
+                        <input type="text">
+                    </p>
+                    <p class="goodsBargin">
+                        <span class="label">是否可议价</span>
+                        <input type="text">
+                    </p>
+                    <p class="goodsClassify">
+                        <span class="label">商品分类</span>
+                        <input type="text">
+                        <input type="text">
+                    </p>
+                    <p class="goodsHandle">
+                        <button class="haveSelected">保存</button>
+                        <button class="haveSelected">返回</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="editAnnounce changeBlock">
+                <h2>公告编辑</h2>
+                <hr>
+                <p>
+                    <span class="label">公告标题</span>
+                    <input type="text">
+                </p>
+                <p>
+                    <span class="label">发布时间</span>
+                    <input type="text" class="announceTime" disabled="disabled">
+                </p>
+                <p>
+                    <span class="content label">公告内容</span>
+                    <textarea cols="30" rows="10"></textarea>
+                </p>
+                <p>
+                    <button class="haveSelected">保存</button>
+                    <button class="haveSelected">取消</button>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="lookFeedback changeBlock">
+            <h2>反馈查看</h2>
+            <hr>
+            <p class="feedbackPerson">
+                <span class="label">反馈人</span>
+                <input type="text" disabled="disabled">
+            </p>
+            <p class="feedbackTime">
+                <span class="label">反馈时间</span>
+                <input type="text" disabled="disabled">
+            </p>
+            <p class="feedbackSatisify">
+                <span class="label">反馈满意度</span>
+                <input type="text" disabled="disabled">
+            </p>
+            <p>
+                <span class="content label">反馈内容</span>
+                <textarea cols="30" rows="10" disabled="disabled"></textarea>
+            </p>
+            <p>
+                <button>返回</button>
+            </p>
+        </div>
+    </main>
+    <div class="mainBg"></div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/manager.js"></script>
+    <script src="js/canvas.js"></script>
+</body>
+
+</html>
