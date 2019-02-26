@@ -1,11 +1,11 @@
 let goodsSort = true;
 let dataDisplaying = false;
-if(locationExtract('ways')<3)
-	  $('.goodsStock').remove();
+if (locationExtract('ways') < 3)
+    $('.goodsStock').remove();
 const goodsShowCol = "<div class='singleShow'>" + $('.singleShow').html() + '</div>';
 const goodsShowRow = "<div class='singleShowRow'>" + $('.singleShowRow').html() + '</div>';
 $(function() {
-  
+
     navChange();
     priceHandle();
     sortChange();
@@ -168,8 +168,6 @@ function classifyShow(type, sort) {
             }
         }
     });
-//    if(locationExtract('ways')<2)
-//    	$('.goodsStock').removeClass('goodsStock');
 }
 
 
@@ -207,8 +205,8 @@ function searchDisplay(type, sort) {
             }
         }
     });
-//    if(locationExtract('ways')<2)
-//    	$('.goodsStock').removeClass('goodsStock');
+    //    if(locationExtract('ways')<2)
+    //    	$('.goodsStock').removeClass('goodsStock');
 }
 
 
