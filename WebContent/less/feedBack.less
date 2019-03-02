@@ -1,0 +1,79 @@
+@buttonUpColor:rgb(102, 102, 255);
+@buttonDownCOlor:rgba(102, 102, 255, 0.6);
+
+main,
+header>div {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(241, 101, 34);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: 1px solid buttonUpColor;
+    color: buttonDownCOlor;
+    background-color: #EEF6FF;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid buttonDownCOlor;
+        color: buttonUpColor;
+    }
+}
+
+header {
+    margin: 10px 20px;
+    border-bottom: 2px solid rgb(241, 101, 34);
+    img {
+        height: 60px;
+    }
+    span {
+        font-size: 30px;
+        color: rgb(102, 102, 102);
+    }
+}
+
+textarea {
+    margin: 20px 50px;
+}
+
+.greet {
+    padding: 10px 20px;
+}
+
+.question {
+    margin: 10px 0px;
+    border: 1px solid #EEF6FF;
+}
+
+.question>p:first-child {
+    padding: 10px;
+    margin: 0px;
+    background-color: #EEF6FF;
+}
+
+.error {
+    display: none;
+    font-size: 15px;
+    color: rgb(255, 0, 0);
+}
+
+.mobile {
+    display: inline-block;
+    width: 80px;
+}
+
+.submit {
+    padding: 5px;
+    text-align: center;
+    background-color: #EEF6FF;
+}

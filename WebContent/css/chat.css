@@ -1,355 +1,288 @@
 body {
-    /*background-color: rgb(0, 0, 0);*/
-    background:url(../img/chatBg.jpg) no-repeat;
-    background-size:cover;
+  background: url(../img/chatBg.jpg) no-repeat;
+  background-size: cover;
 }
-
 main {
-    width: 803px;
-    height: 600px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    overflow: hidden;
-    transform: translatey(20px);
+  width: 803px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  overflow: hidden;
+  transform: translatey(20px);
 }
-
 .icon-emoji-happy {
-    font-size: 18px;
-    cursor: pointer;
+  font-size: 18px;
+  cursor: pointer;
 }
-
 .leftBlock {
-    width: 240px;
-    border: 1px solid rgba(102, 102, 102, 0.5);
-    background-color: #FAFAD2;
+  width: 240px;
+  border: 1px solid rgba(102, 102, 102, 0.5);
+  background-color: #FAFAD2;
 }
-
 .leftBlock,
 .mainBlock {
-    float: left;
-    height: 100%;
+  float: left;
+  height: 100%;
 }
-
-.myInformation img {
-    width: 50px;
-    height: 50px;
-}
-
-.myInformation img {
-    float: left;
-    vertical-align: text-top;
-}
-
 .myInformation {
-    border-bottom: 1px solid rgba(102, 102, 102, 0.5);
-    padding: 4px;
-    height: 10%;
-    background-color: #FAFAD2;
+  border-bottom: 1px solid rgba(102, 102, 102, 0.5);
+  padding: 4px;
+  height: 10%;
+  background-color: #FAFAD2;
 }
-
+.myInformation img {
+  float: left;
+  vertical-align: text-top;
+  width: 50px;
+  height: 50px;
+}
 .myInformation input {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
-
 .contactType {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 3px;
-    border-radius: 3px;
-    font-size: 12px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 102, 153);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #006699;
 }
-
 .chatBlock {
-    float: left;
-    width: 560px;
-    height: 540px;
-    border-right: 1px solid rgba(102, 102, 102, 0.5);
+  float: left;
+  width: 560px;
+  height: 540px;
+  border-right: 1px solid rgba(102, 102, 102, 0.5);
 }
-
 .messageShow {
-    border-top: 1px solid rgba(102, 102, 102, 0.5);
-    border-bottom: 1px solid rgba(102, 102, 102, 0.5);
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 400px;
+  border-top: 1px solid rgba(102, 102, 102, 0.5);
+  border-bottom: 1px solid rgba(102, 102, 102, 0.5);
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 400px;
 }
-
 .specialMessage {
-    margin: 4px;
+  margin: 4px;
 }
-
 .specialMessage .sureTrade {
-    float: right;
-    margin-right: 6px;
+  float: right;
+  margin-right: 6px;
 }
-
 .sureTrade {
-    padding: 3px;
-    font-size: 10px;
-    border: 1px solid rgba(102, 102, 102, 0.5);
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 3px;
+  font-size: 10px;
+  border: 1px solid rgba(102, 102, 102, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
 }
-
 .edit {
-    margin: 6px;
-    border: none;
-    outline: none;
-    width: 548px;
-    height: 52px;
-    outline: none;
+  margin: 6px;
+  border: none;
+  width: 548px;
+  height: 52px;
+  outline: none;
 }
-
 .messageSend {
-    position: relative;
+  position: relative;
 }
-
 .enterSend {
-    position: absolute;
-    right: 10px;
-    width: 60px;
-    text-align: center;
-    border: 1px solid rgba(102, 102, 102, 0.5);
-    border-radius: 5px;
-    cursor: pointer;
+  position: absolute;
+  right: 10px;
+  width: 60px;
+  text-align: center;
+  border: 1px solid rgba(102, 102, 102, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
 }
-
 .nav {
-    height: 300px;
+  height: 300px;
 }
-
-.nav>span {
-    float: left;
-    width: 50%;
-    text-align: center;
+.nav > span {
+  float: left;
+  width: 50%;
+  text-align: center;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  background-color: rgba(204, 204, 204, 0.6);
 }
-
-.nav>span {
-    border-top: 1px solid rgb(102, 102, 102, 0.5);
-    border-bottom: 1px solid rgb(102, 102, 102, 0.5);
-    background-color: rgba(204, 204, 204, 0.6);
+.nav > span :first-child {
+  border-top: 2px solid #ff0000;
+  border-bottom: none;
+  color: #ff0000;
+  background-color: #ffffff;
 }
-
-.nav>span:first-child {
-    border-top: 2px solid rgb(255, 0, 0);
-    border-bottom: none;
-    color: rgb(255, 0, 0);
-    background-color: rgb(255, 255, 255);
-}
-
-.commodityPrice::before {
-    content: "浠锋牸锛�";
-    color: rgb(0, 0, 0);
-}
-
-.commodityInformation>img {
-    float: left;
-    width: 50px;
-    height: 50px;
-}
-
 .commodityName {
-    height: 60px;
+  height: 60px;
 }
-
 .commodityIntroduce::before {
-    content: "鍟嗗搧浠嬬粛锛�";
-    color: rgb(0, 0, 0);
+  content: "鍟嗗搧浠嬬粛锛�";
+  color: #000000;
 }
-
 .commodityWays::before {
-    content: "鍙栬揣鏂瑰紡锛�";
-    color: rgb(0, 0, 0);
+  content: "鍙栬揣鏂瑰紡锛�";
+  color: #000000;
 }
-
 .commodityIntroduce,
 .commodityWays {
-    color: rgb(102, 102, 102, 0.6);
+  color: #666666;
 }
-
 .commodityInformation * {
-    font-size: 14px;
+  font-size: 14px;
 }
-
+.commodityInformation > img {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
 .commodityPrice {
-    color: rgb(255, 0, 0);
+  color: #ff0000;
 }
-
+.commodityPrice::before {
+  content: "浠锋牸锛�";
+  color: #000000;
+}
 .decideTransacte:hover {
-    color: rgb(255, 0, 0);
-    cursor: pointer;
+  color: #ff0000;
+  cursor: pointer;
 }
-
 .recentBrowse {
-    text-align: center;
+  text-align: center;
 }
-
-.recentBrowse>span {
-    border-bottom: 2px solid rgb(255, 0, 0);
+.recentBrowse > span {
+  border-bottom: 2px solid #ff0000;
 }
-
 .recentBrowse hr {
-    color: rgba(102, 102, 102, 0.5);
+  color: rgba(102, 102, 102, 0.5);
 }
-
 .recentComInformation {
-    position: relative;
-    height: 60px;
-    border-bottom: 1px solid rgba(102, 102, 102, 0.5);
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid rgba(102, 102, 102, 0.5);
 }
-
 .goodsInformation img {
-    display: block;
-    margin: 8px auto;
-    width: 210px;
-    max-height: 120px;
+  display: block;
+  margin: 8px auto;
+  width: 210px;
+  max-height: 120px;
 }
-
 .sendLink {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    padding: 4px;
-    border: 1px solid rgba(102, 102, 102, 0.5);
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 4px;
+  border: 1px solid rgba(102, 102, 102, 0.5);
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
 }
-
 .message {
-    width: 100%;
-    margin: 10px 10px;
+  width: 100%;
+  margin: 10px 10px;
 }
-
+.message img {
+  width: 40px;
+  height: 40px;
+}
 .leftMessage {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
-
-.leftMessage .name {
-    /* margin-left: 40px; */
-}
-
 .leftMessage .time {
-    margin-left: 12px;
+  margin-left: 12px;
 }
-
-.rightMessage {
-    float: right;
-}
-
-.rightMessage .time {
-    margin-right: 12px;
-}
-
-.rightMessage .name {
-    /* margin-right: 40px; */
-    text-align: right;
-}
-
-.name {
-    font-size: 12px;
-}
-
 .leftMessage img,
 .leftMessage .concreteMessage {
-    float: left;
+  float: left;
 }
-
+.leftMessage .concreteMessage::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -16px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: solid 8px;
+  border-color: transparent #F8F8FF transparent transparent;
+}
+.rightMessage {
+  float: right;
+}
+.rightMessage .time {
+  margin-right: 12px;
+}
+.rightMessage .name {
+  text-align: right;
+}
 .rightMessage img,
 .rightMessage .concreteMessage {
-    float: right;
+  float: right;
 }
-
-.concreteMessage {
-    position: relative;
-    line-height: 28px;
-    border-radius: 5px;
-    padding: 6px;
-    margin: 0px 15px;
-    max-width: 407px;
-    font-size: 12px;
-    background-color: #F8F8FF;
-}
-
-.message img {
-    width: 40px;
-    height: 40px;
-}
-
-.concreteMessage img {
-    width: 24px;
-    height: 24px;
-}
-
-
-.leftMessage .concreteMessage::before {
-    content: "";
-    position: absolute;
-    top: 9px;
-    left: -16px;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    border: solid 8px;
-    border-color: transparent #F8F8FF transparent transparent;
-}
-
 .rightMessage .concreteMessage::before {
-    content: "";
-    position: absolute;
-    top: 9px;
-    right: -16px;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    border: solid 8px;
-    border-color: transparent transparent transparent #F8F8FF;
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -16px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: solid 8px;
+  border-color: transparent transparent transparent #F8F8FF;
 }
-
+.name {
+  font-size: 12px;
+}
+.concreteMessage {
+  position: relative;
+  line-height: 28px;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 0px 15px;
+  max-width: 407px;
+  font-size: 12px;
+  background-color: #F8F8FF;
+}
+.concreteMessage img {
+  width: 24px;
+  height: 24px;
+}
 .emoji {
-    display: none;
-    position: absolute;
-    top: -150px;
-    width: 450px;
-    background-color: rgb(255, 255, 255);
+  display: none;
+  position: absolute;
+  top: -150px;
+  width: 450px;
+  background-color: #ffffff;
 }
-
 .emoji img {
-    float: left;
-    padding: 2px;
-    border: 1px solid rgb(102, 102, 102);
-    cursor: pointer;
+  float: left;
+  padding: 2px;
+  border: 1px solid #666666;
+  cursor: pointer;
 }
-
 dt {
-    display: inline-block;
-    width: 86px;
-    margin: 0px 5px;
-    padding: 3px 0px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+  display: inline-block;
+  width: 86px;
+  margin: 0px 5px;
+  padding: 3px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
-
 dd {
-    position: relative;
-    top: -25px;
-    margin-left: 96px;
-    display: -webkit-box;
-    overflow: hidden;
-    font-size: 13px;
-    word-wrap: break-word;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  position: relative;
+  top: -25px;
+  margin-left: 96px;
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 13px;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
-
 .btn {
-    background: linear-gradient(rgba(255, 153, 0, 0.2) 2%, #CDC673);
+  background: linear-gradient(rgba(255, 153, 0, 0.2) 2%, #cdc673);
 }

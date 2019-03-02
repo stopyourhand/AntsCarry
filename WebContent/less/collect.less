@@ -1,0 +1,94 @@
+.funFormation {
+    height: 180px;
+    margin: 17px 0px 50px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    background-image: url(../img/111.jpg);
+}
+
+.wholeTitle {
+    margin: 0px;
+    font-size: 30px;
+    line-height: 85px;
+    text-indent: 40px;
+    box-shadow: 0 0 black;
+    color: rgb(255, 255, 255);
+}
+
+main {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    top: -100px;
+    box-shadow: 0px 3px 10px rgb(102, 102, 102);
+    background-color: rgb(255, 255, 255);
+}
+
+.mainTitle {
+    height: 60px;
+    * {
+        line-height: 60px;
+    }
+    input[type="checkbox"] {
+        margin: 0 20px;
+    }
+}
+
+.mainHandle {
+    float: right;
+    span {
+        margin: 0 70px;
+    }
+    .addressTitle {
+        margin: 0px 16px 0px 193px;
+    }
+}
+
+.mainContents {
+    height: 422px;
+    overflow-y: scroll;
+}
+
+.mainContent {
+    position: relative;
+    >p {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        width: 240px;
+        margin: 10px;
+        text-align: center;
+        transform: translateY(-100%);
+        >span {
+            display: inline-block;
+            width: 117px;
+        }
+    }
+    img {
+        margin-left: 12px;
+        width: 200px;
+        max-height: 80px;
+        padding: 10px;
+    }
+}
+
+
+.goodsInformation {
+    display: inline-block;
+    width: 260px;
+    transform: translateY(-20px);
+    p {
+        margin-bottom: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+
+.icon-cancel {
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
