@@ -20,6 +20,21 @@ ul {
     display: inline-block;
 }
 
+.headLeft>ul li {
+    float: left;
+    line-height: 52px;
+}
+
+.headLeft ul li>a {
+    position: relative;
+    padding: 4px 20px;
+    color: #ffffff;
+}
+
+.headLeft ul li a:hover {
+    filter: drop-shadow(1px 1px rgba(102, 102, 102, 0.8));
+}
+
 .searchFor .icon-search {
     position: absolute;
     top: 15px;
@@ -44,22 +59,10 @@ ul {
     border-radius: 10px;
 }
 
-.top {
-    top: 0px;
-}
-
-.bottom {
-    bottom: 0px;
-}
-
-.hideImg {
-    display: none;
-}
-
 .logoImg span {
     display: inline-block;
     width: 0px;
-    border: 2px solid rgb(241, 101, 34);
+    border: 2px solid #f16522;
     z-index: 3;
 }
 
@@ -79,24 +82,27 @@ ul {
     border-bottom-right-radius: 10px;
 }
 
-.headLeft>ul li {
-    float: left;
-    line-height: 52px;
+.top {
+    top: 0px;
 }
 
-.headLeft>ul li>a {
-    position: relative;
-    padding: 4px 20px;
-    color: rgb(255, 255, 255);
+.bottom {
+    bottom: 0px;
 }
 
-.headLeft>ul li a:hover {
-    filter: drop-shadow(1px 1px rgba(102, 102, 102, 0.8));
+.hideImg {
+    display: none;
 }
 
 .headSelect {
     border-radius: 5px;
-    background-color: rgb(241, 101, 34);
+    background-color: #f16522;
+}
+
+.search {
+    margin-left: 170px;
+    height: 52px;
+    line-height: 52px;
 }
 
 .search ul {
@@ -105,16 +111,12 @@ ul {
     top: 26px;
     left: 77px;
     padding: 0px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     z-index: 2;
 }
 
-.claChoose>ul {
-    left: 0px;
-}
-
 .search ul li:hover {
-    background-color: rgb(153, 153, 153);
+    background-color: #999999;
     cursor: pointer;
 }
 
@@ -133,52 +135,46 @@ ul {
     height: 32px;
 }
 
-.search {
-    margin-left: 170px;
-    height: 52px;
-    line-height: 52px;
-}
-
 .search input {
     border: none;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid #ffffff;
     width: 220px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     background-color: transparent;
 }
 
-.showContaniner>span {
-    color: rgb(255, 255, 255);
-}
-
 .search input:focus {
-    border-bottom: 1px solid rgb(255, 0, 0);
-}
-
-.searchFor .icon-search {
-    color: rgb(255, 255, 255);
-    cursor:pointer;
+    border-bottom: 1px solid #ff0000;
 }
 
 .search .error {
     display: none;
     position: absolute;
-    color: rgb(255, 0, 0);
+    color: #ff0000;
+}
+
+.claChoose>ul {
+    left: 0px;
 }
 
 .claChoose>ul>li {
     width: 72px;
     line-height: 30px;
     text-align: center;
-    background-color: rgb(102, 102, 102);
-    color: rgb(255, 255, 255);
+    background-color: #666666;
+    color: #ffffff;
 }
 
 .claChoose>span {
     padding: 5px 21px;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     color: #2b333b;
+    cursor: pointer;
+}
+
+.searchFor .icon-search {
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -190,13 +186,17 @@ ul {
     height: 60px;
 }
 
+.showContaniner>span {
+    color: #ffffff;
+}
+
 .showContaniner>span:last-child::before {
     content: "/";
     margin-right: 5px;
 }
 
 .showContaniner>span:hover {
-    color: rgb(255, 0, 0);
+    color: #ff0000;
     cursor: pointer;
 }
 
@@ -206,9 +206,9 @@ ul {
     top: 54px;
     right: 0px;
     width: 220px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     z-index: 2;
-    box-shadow: 0px 7px 20px rgb(102, 102, 102);
+    box-shadow: 0px 7px 20px #666666;
 }
 
 .outLogon {
@@ -218,7 +218,7 @@ ul {
 }
 
 .outLogon:hover {
-    color: rgb(255, 0, 0);
+    color: #ff0000;
     cursor: pointer;
 }
 
@@ -234,7 +234,7 @@ ul {
     font-size: 12px;
     text-align: center;
     border-radius: 5px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     background-color: rgba(102, 102, 102, 0.8);
 }
 
@@ -244,7 +244,7 @@ ul {
     left: 0px;
     height: 66px;
     width: 100%;
-    box-shadow: 1px 1px 10px rgb(102, 102, 102);
+    box-shadow: 1px 1px 10px #666666;
     background-color: #2b333b;
     z-index: -1;
 }
@@ -255,5 +255,5 @@ ul {
 
 .showInformationTop {
     line-height: 64px;
-    border-bottom: 1px solid rgb(102, 102, 102);
+    border-bottom: 1px solid #666666;
 }

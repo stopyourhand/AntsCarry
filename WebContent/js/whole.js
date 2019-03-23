@@ -1,5 +1,8 @@
 $(function() {
-    animateLogo(0, 500);
+    var it = animateLogo(500);
+    setInterval(function() {
+        it.next();
+    }, 500);
     search('.slideSearch', '.slideChoose', '.searchGoods');
     search('.search', '.claChoose', '.searchFor');
     if ($(window).scrollTop() > 400)
@@ -124,7 +127,7 @@ function searchShow(data, search, classify, searchfor) {
 }
 
 function insertWord(whole, insert) {
-    return whole.slice(0, whole.indexOf(insert)) + "<span class='insert'>" + whole.slice(whole.indexOf(insert), whole.indexOf(insert)+insert.length)  + "</span>" + whole.slice(whole.indexOf(insert) + insert.length, whole.length);
+    return whole.slice(0, whole.indexOf(insert)) + "<span class='insert'>" + whole.slice(whole.indexOf(insert), whole.indexOf(insert) + insert.length) + "</span>" + whole.slice(whole.indexOf(insert) + insert.length, whole.length);
 }
 
 
@@ -146,48 +149,88 @@ function downChoose() {
 
 
 // logo动画
-function animateLogo(index, time) {
-    if (index > 5)
-        index = 0;
-    if (index == 0) {
-        $('.logoImg>span').show().stop();
-        $('.logoImg>span').animate({
-            width: 163,
-            left: 0
-        }, time);
-    } else if (index == 1) {
-        $('.logoImg>span').show().stop();
-        $('.logoImg>span').animate({
-            height: 33
-        }, time);
-    } else if (index == 2) {
-        $('.logoImg>img').eq(1).stop();
-        $('.logoImg>img').eq(1).slideDown(time, function() {
-            $(this).removeClass('top').addClass('bottom');
-        });
-    } else if (index == 3) {
-        $('.logoImg>img').eq(1).stop();
-        $('.logoImg>img').eq(1).slideUp(time * 1.5, function() {
-            $(this).removeClass('bottom').addClass('top');
-        });
-    } else if (index == 4) {
-        $('.logoImg>span').show().stop();
-        $('.logoImg>span').animate({
-            height: 0
-        }, time);
-    } else if (index == 5) {
-        $('.logoImg>span').stop();
-        $('.logoImg>span').animate({
-            width: 0,
-            left: 83
-        }, time, function() {
-            $(this).hide();
-        });
-    }
-    index++;
-    setTimeout(function() {
-        animateLogo(index, time);
-    }, time * 1.5);
+// function animateLogo(index, time) {
+//     if (index > 5)
+//         index = 0;
+//     if (index == 0) {
+//         $('.logoImg>span').show().stop();
+//         $('.logoImg>span').animate({
+//             width: 163,
+//             left: 0
+//         }, time);
+//     } else if (index == 1) {
+//         $('.logoImg>span').show().stop();
+//         $('.logoImg>span').animate({
+//             height: 33
+//         }, time);
+//     } else if (index == 2) {
+//         $('.logoImg>img').eq(1).stop();
+//         $('.logoImg>img').eq(1).slideDown(time, function() {
+//             $(this).removeClass('top').addClass('bottom');
+//         });
+//     } else if (index == 3) {
+//         $('.logoImg>img').eq(1).stop();
+//         $('.logoImg>img').eq(1).slideUp(time * 1.5, function() {
+//             $(this).removeClass('bottom').addClass('top');
+//         });
+//     } else if (index == 4) {
+//         $('.logoImg>span').show().stop();
+//         $('.logoImg>span').animate({
+//             height: 0
+//         }, time);
+//     } else if (index == 5) {
+//         $('.logoImg>span').stop();
+//         $('.logoImg>span').animate({
+//             width: 0,
+//             left: 83
+//         }, time, function() {
+//             $(this).hide();
+//         });
+//     }
+//     index++;
+//     setTimeout(function() {
+//         animateLogo(index, time);
+//     }, time * 1.5);
+// }
+
+function* animateLogo(time) {
+    yield;
+    $('.logoImg>span').show().stop();
+    $('.logoImg>span').animate({
+        width: 163,
+        left: 0
+    }, time);
+
+    yield;
+    $('.logoImg>span').show().stop();
+    $('.logoImg>span').animate({
+        height: 33
+    }, time);
+    yield;
+    $('.logoImg>img').eq(1).stop();
+    $('.logoImg>img').eq(1).slideDown(time, function() {
+        $(this).removeClass('top').addClass('bottom');
+    });
+    yield;
+    yield;
+    $('.logoImg>img').eq(1).stop();
+    $('.logoImg>img').eq(1).slideUp(time * 1.5, function() {
+        $(this).removeClass('bottom').addClass('top');
+    });
+    yield;
+    $('.logoImg>span').show().stop();
+    $('.logoImg>span').animate({
+        height: 0
+    }, time);
+    yield;
+    $('.logoImg>span').stop();
+    $('.logoImg>span').animate({
+        width: 0,
+        left: 83
+    }, time, function() {
+        $(this).hide();
+    });
+    yield* animateLogo(time);
 }
 
 // 滑过滑块时滑出注释
